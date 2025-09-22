@@ -3,35 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YourCompany - Contact Us</title>
+  <title>Sulane - Contact Us</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header> ... </header>
+<!-- 顶部信息条 -->
+<div class="top-bar">
+  <div class="container top-bar-content">
+    <div class="socials">
+      <a href="#">Fb</a>
+      <a href="#">Tw</a>
+      <a href="#">In</a>
+    </div>
+    <div class="contact-info">
+      <span>+1 234 567 890</span> | 
+      <span>info@sulanesalt.com</span>
+    </div>
+  </div>
+</div>
 
-<section class="page-header">
-  <h2>Contact Us</h2>
-  <p>We’d love to hear from you. Reach out today!</p>
+<!-- Logo + 导航 -->
+<header class="main-header">
+  <div class="container nav-container">
+    <h1 class="logo">Sulane</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="water-soft-salts.html">Water Soft Salts</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="trust.html">Trust</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- 页面 Banner -->
+<section class="page-hero" style="background-image: url('images/main.jpg');">
+  <div class="overlay"></div>
+  <div class="page-hero-content">
+    <h2>Contact Us</h2>
+    <p>Home → Contact Us</p>
+  </div>
 </section>
 
-<section class="content container">
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message"></textarea>
-    <button type="submit" class="btn">Send</button>
-  </form>
-  <p>Email: info@yourcompany.com</p>
-  <p>Phone: +1 234 567 890</p>
-  <p>Address: 123 Business Street, City, Country</p>
+<!-- 联系方式模块 -->
+<section class="contact-cards container">
+
+  <!-- 公司信息 -->
+  <div class="contact-card">
+    <div class="icon">🏢</div>
+    <h3>Our Company</h3>
+    <p>Sulane Environmental Technology Co., Ltd<br>Wuxi, Jiangsu, China</p>
+    <a href="https://www.google.com/maps/place/Jiangyin+Shunji+Knitted+Wool+Fabric/@31.7563456,120.5008001,17z/data=!3m1!4b1!4m6!3m5!1s0x35b3e9ca62edafbb:0x8b48c4c71fbc336b!8m2!3d31.7563457!4d120.505671!16s%2Fg%2F11g_c_mml?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D" 
+       target="_blank" class="btn">Get Directions</a>
+  </div>
+
+  <!-- 邮箱 -->
+  <div class="contact-card">
+    <div class="icon">✉️</div>
+    <h3>Email</h3>
+    <p id="emailText">gavinyin@sulanesalt.com</p>
+    <button class="btn" onclick="copyEmail()">Copy Email</button>
+  </div>
+
+  <!-- WhatsApp -->
+  <div class="contact-card">
+    <div class="icon">📱</div>
+    <h3>WhatsApp</h3>
+    <p>+1 778 836 1914</p>
+    <a href="https://wa.me/17788361914" target="_blank" class="btn">Message on WhatsApp</a>
+  </div>
+
 </section>
 
+<!-- 页脚 -->
 <footer>
-  <div class="container">
-    <p>© 2025 YourCompany. All rights reserved.</p>
+  <div class="container footer-content">
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>📞 Phone: +1 234 567 890</p>
+      <p>✉️ Email: info@sulanesalt.com\n</p>
+      <p>🏢 Address: Wuxi, Jiangsu, China</p>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Sulane Environmental Technology Co., Ltd. All rights reserved.</p>
+    </div>
   </div>
 </footer>
+
+<script>
+function copyEmail() {
+  const email = document.getElementById("emailText").innerText;
+  navigator.clipboard.writeText(email).then(() => {
+    alert("Email copied: " + email);
+  });
+}
+</script>
 
 </body>
 </html>

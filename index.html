@@ -3,18 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YourCompany - Home</title>
+  <title>Sulane - Home</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-  <div class="container">
-    <h1 class="logo">YourCompany</h1>
+<!-- 顶部信息条 -->
+<div class="top-bar">
+  <div class="container top-bar-content">
+    <!-- <div class="socials">
+      <a href="#">Fb</a>
+      <a href="#">Tw</a>
+      <a href="#">In</a>
+    </div> -->
+    <div class="contact-info">
+      <span>What‘s App：1 7788361914 </span> | 
+      <span>gavinyin@sulanesalt.com</span>
+    </div>
+  </div>
+</div>
+
+<!-- Logo + 导航 -->
+<header class="main-header">
+  <div class="container nav-container">
+    <h1 class="logo">Sulane</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="water-soft-salts.html">Water Soft Salts</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="water-soft-salts.html">Water Soften Salts</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="products.html">Products</a></li>
         <li><a href="trust.html">Trust</a></li>
@@ -24,25 +40,47 @@
   </div>
 </header>
 
-<section class="hero">
-  <div class="slider">
-    <div class="slides">
-      <img src="images/hero1.jpg" alt="Hero Image 1">
-      <img src="images/hero2.jpg" alt="Hero Image 2">
-      <img src="images/hero3.jpg" alt="Hero Image 3">
-    </div>
-  </div>
+<!-- Hero 区 -->
+<section class="hero" style="background-image: url('images/main.jpg');">
   <div class="hero-content">
-    <h2>Welcome to YourCompany</h2>
-    <p>High-quality water soft salts and trusted solutions.</p>
-    <a href="products.html" class="btn">Explore Products</a>
+    <h4>High Purity Water Softener Salt</h4>
+    <h2>Direct from Factory in Wuxi, China</h2>
+    <p>OEM Packaging | Exported to 20+ Countries</p>
+    <a href="contact.html" class="btn">Contact on WhatsApp</a>
   </div>
 </section>
 
+<!-- 三个卡片 -->
+<section class="services container">
+  <div class="service-card">
+    <div class="icon">🏭</div>
+    <h3>Factory-direct Service</h3>
+    <p>Fast shipment via Shanghai Port with OEM packaging.</p>
+  </div>
+  <div class="service-card">
+    <div class="icon">📦</div>
+    <h3>OEM Packaging</h3>
+    <p>Custom branding available with full documentation support.</p>
+  </div>
+  <div class="service-card">
+    <div class="icon">🚢</div>
+    <h3>Global Export</h3>
+    <p>Supplying high-purity salt to 20+ countries worldwide.</p>
+  </div>
+</section>
 
+<!-- Footer -->
 <footer>
-  <div class="container">
-    <p>© 2025 YourCompany. All rights reserved.</p>
+  <div class="container footer-content">
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>📞 what‘s app：+1 778 836 1914 </p>
+      <p>✉️ Email: gavinyin@sulanesalt.com</p>
+      <p>🏢 Address: Wuxi, Jiangsu, China</p>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Sulane Environmental Technology Co., Ltd. All rights reserved.</p>
+    </div>
   </div>
 </footer>
 
