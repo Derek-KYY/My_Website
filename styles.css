@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 /* Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+body { 
+  font-family: 'Montserrat', sans-serif; 
+  line-height: 1.6; 
+  color: #333; 
+}
+
 .container { width: 90%; max-width: 1200px; margin: auto; }
 
 /* 顶部信息条 */
@@ -59,8 +66,16 @@ nav ul li a:hover { background: #e67e22; color: #fff; border-radius: 4px; }
   z-index: 1;
   max-width: 600px;
 }
-.hero-content h4 { font-size: 1rem; margin-bottom: 10px; }
-.hero-content h2 { font-size: 2.5rem; margin-bottom: 20px; }
+.hero-content h4 {
+  font-size: clamp(1.8rem, 5vw, 2.5rem); 
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.hero-content h2 { 
+  font-size: 1.2rem;  
+  margin-bottom: 10px; 
+  font-weight: 400;    
+}
 .hero-content p { margin-bottom: 20px; }
 .btn {
   background: #e67e22;
@@ -96,24 +111,20 @@ footer {
   color: #fff;
   padding: 40px 20px 20px;
 }
-
 .footer-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-
 .footer-contact h3 {
   margin-bottom: 10px;
   font-size: 1.2rem;
 }
-
 .footer-contact p {
   margin: 5px 0;
   font-size: 0.95rem;
 }
-
 .footer-bottom {
   margin-top: 20px;
   border-top: 1px solid #333;
@@ -145,8 +156,9 @@ footer {
   z-index: 1;
 }
 .page-hero-content h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 10px;
+  font-weight: 700;
 }
 .page-hero-content p {
   font-size: 0.9rem;
@@ -159,6 +171,7 @@ nav ul li a.active {
   color: #fff !important;
   border-radius: 4px;
 }
+
 /* 产品行布局 */
 .product-row {
   display: flex;
@@ -173,18 +186,19 @@ nav ul li a.active {
 .product-row img {
   max-width: 250px;
   border-radius: 8px;
+  opacity: 1 !important;      /* 保持正常亮度 */
+  filter: none !important;    /* 去掉亮度变化 */
+  transition: none !important;
 }
 .product-info {
   flex: 1;
 }
+.product-info p {
+  line-height: 1.5;     
+  margin-bottom: 6px;    
+}
 .product-info h3 {
   margin-bottom: 10px;
-  font-size: 1.3rem;
-}
-.product-info p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.6;
 }
 
 /* 联系卡片 */
@@ -203,6 +217,10 @@ nav ul li a.active {
   text-align: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   min-width: 280px;
+
+  display: flex;              /* 让每个卡片内部变成 flex */
+  flex-direction: column;     /* 垂直方向 */
+  justify-content: space-between; /* 按钮会推到底 */
 }
 .contact-card .icon {
   font-size: 2rem;
@@ -212,14 +230,10 @@ nav ul li a.active {
   margin-bottom: 10px;
   font-size: 1.2rem;
 }
-.contact-card p {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 15px;
-}
+/* Contact card buttons */
 .contact-card .btn {
   display: inline-block;
-  min-width: 180px;     
+  width: 240px;         /* 统一按钮宽度 */
   text-align: center;
   background: #e67e22;
   color: #fff;
@@ -229,12 +243,23 @@ nav ul li a.active {
   font-weight: bold;
   font-size: 0.95rem;
   transition: background 0.3s;
-  border: none;       
+  border: none;
   cursor: pointer;
+  margin: 0 auto;       /* 居中 */
 }
+
 .contact-card .btn:hover {
   background: #cf6d17;
 }
+
+/* 保证 email 和其他卡片的文字样式一致 */
+.contact-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;   /* 和按钮间隔一致 */
+  text-align: center;
+}
+
 
 /* 小屏幕时上下排列 */
 @media (max-width: 768px) {
