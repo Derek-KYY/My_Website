@@ -268,3 +268,148 @@ nav ul li a.active {
     align-items: center;
   }
 }
+/* 水体验区 */
+.water-experience {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 80px auto;
+}
+
+.water-experience .text {
+  flex: 1;
+}
+
+.water-experience .text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.water-experience .text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.water-experience .btn-outline {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #000;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.water-experience .btn-outline:hover {
+  background: #000;
+  color: #fff;
+}
+
+.water-experience .images {
+  flex: 1;
+  position: relative;  /* 子元素相对定位的参考 */
+  height: 500px;       /* 容器高度要足够大，能包住两张图 */
+  
+}
+
+/* 上图 */
+.water-experience .images .top-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;    /* 固定宽度，避免被撑满导致消失 */
+  border-radius: 8px;
+}
+
+/* 下图 */
+.water-experience .images .bottom-img {
+  position: absolute;
+  top: 160px;      /* 往下移，控制上下间距 */
+  left: 230px;     /* 往右移，控制水平间距 */
+  width: 250px;    /* 固定宽度 */
+  border-radius: 8px;
+}
+
+}
+
+.water-experience .images img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+/* 水体验区图片布局 */
+.image-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  position: relative;
+}
+
+.image-block {
+  position: absolute;
+  width: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image-block img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+/* 上图靠右 */
+.image-block.top {
+  top: 0;
+  right: 0;
+}
+
+/* 下图靠左并往下 */
+.image-block.bottom {
+  top: 150px;
+  left: 0;
+}
+
+/* 鱼盐区 */
+.fish-salt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 4rem auto;
+}
+
+.fish-salt .image {
+  flex: 1;
+}
+
+.fish-salt .image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.fish-salt .text {
+  flex: 1;
+}
+
+.fish-salt .text h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.fish-salt .btn-outline {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #000;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.fish-salt .btn-outline:hover {
+  background: #000;
+  color: #fff;
+}
